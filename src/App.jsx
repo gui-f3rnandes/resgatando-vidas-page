@@ -1,5 +1,7 @@
-import './App.css'
+import './App.css' //Importação da folha de estilos globais
 
+//Importação dos componentes
+import Navbar from './components/Navbar'
 
 function App() {
 
