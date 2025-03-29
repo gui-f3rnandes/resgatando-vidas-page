@@ -9,11 +9,29 @@ function App() {
   return (
     <>
       <Navbar />
-      <BasicInfos
-        pequenoTitulo={"Seja bem-vindo"}
-        titulo={"Resgatando Vidas"}
-        paragrafo={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis iure alias placeat amet nam totam magnam similique cupiditate maiores, quis repudiandae laborum vitae pariatur minus veniam esse rerum. Accusantium, fuga!`}
-      />
+      <section className="p-40 bg-[url()]" id="inicio">
+        <BasicInfos
+          pequenoTitulo={"Seja bem-vindo"}
+          titulo={"Resgatando Vidas"}
+          paragrafo={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis iure alias placeat amet nam totam magnam similique cupiditate maiores, quis repudiandae laborum vitae pariatur minus veniam esse rerum. Accusantium, fuga!`}
+        />
+      </section>
+
+      <section className="p-40 flex gap-60 items-center justify-center" id="quemSou">
+        <figure className="ml-15 w-82 h-82 rounded-full bg-gray-300 flex items-center justify-center relative mb-2.5">
+          <img
+            src=""
+            alt="Foto do Giovane Goulart"
+            className="w-full h-full rounded-full object-cover"
+          />
+        </figure>
+        <BasicInfos
+          pequenoTitulo={"Quem sou"}
+          titulo={"Giovane Goulart"}
+          paragrafo={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit minima quis quia, ullam dolorum eius aperiam quaerat laudantium aliquid ratione saepe, facere tempora dolores ea non maxime autem debitis officiis. Delectus, sapiente quibusdam! Aliquid, voluptate tempore! Accusamus dolorem porro facere impedit quia enim at ullam alias qui magni suscipit, dicta, minus, voluptatem in temporibus eaque placeat corporis aperiam. Commodi, rem.`}
+        />
+      </section>
+
       <Footer />
     </>
   );
