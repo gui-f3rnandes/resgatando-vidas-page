@@ -17,8 +17,8 @@ function App() {
         />
       </section>
 
-      <section className="p-40 flex gap-60 items-center justify-center" id="quemSou">
-        <figure className="ml-15 w-82 h-82 rounded-full bg-gray-300 flex items-center justify-center relative mb-2.5">
+      <section className="p-40 flex flex-col gap-30 items-center justify-center lg:flex-row lg:gap-60" id="quemSou">
+        <figure className="min-w-82 min-h-82 rounded-full bg-gray-300 flex items-center justify-center relative md:mb-2.5 md:ml-15">
           <img
             src=""
             alt="Foto do Giovane Goulart"
