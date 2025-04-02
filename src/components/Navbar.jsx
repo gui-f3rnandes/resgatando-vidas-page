@@ -1,33 +1,66 @@
 //Função padrão para o componente
-const navbarComponent = () => {
-    return (
-        <>
-            <header class="relative grid grid-cols-1 gap-4 my-12 md:grid-cols-12">
-                <div class="ltr md:col-span-9">
-                    <h1 class="ms-23 text-2xl md:text-3xl">Resgatando Vidas</h1>
-                </div>
-                <div class="2xl:hidden">
-                    <button id="menu-button" class="text-gray-600 hover:text-gray-800">
-                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                            <path
-                                fill-rule="evenodd"
-                                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                            />
-                        </svg>
-                    </button>
-                </div>
-                <nav id="menu" class="hidden 2xl:block md:col-span-3">
-                    <ul class="flex flex-col md:flex-row gap-4 md:gap-7">
-                        <li><a href="" rel="noopener noreferrer">Início</a></li>
-                        <li><a href="" rel="noopener noreferrer">Quem Sou</a></li>
-                        <li><a href="" rel="noopener noreferrer">Serviços</a></li>
-                        <li><a href="" rel="noopener noreferrer">Clínicas</a></li>
-                        <li><a href="" rel="noopener noreferrer">Contatos</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </>
-    )
-}
+import { useState } from "react";
 
-export default navbarComponent;
+export default function Navbar() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    return (
+        <nav className="bg-gray-800 w-screen">
+            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div className="relative flex h-16 items-center justify-center">
+                    {/* Botão do Menu Mobile */}
+                    <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        <button
+                            type="button"
+                            className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
+                            aria-controls="mobile-menu"
+                            aria-expanded={isMobileMenuOpen}
+                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        >
+                            <span className="sr-only">Open main menu</span>
+
+                            {isMobileMenuOpen ? (
+                                // Ícone de "Fechar" quando o menu está aberto
+                                <svg className="size-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            ) : (
+                                // Ícone de "Hambúrguer" quando o menu está fechado
+                                <svg className="size-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                            )}
+                        </button>
+                    </div>
+
+                    {/* Logo + Itens do Menu Desktop */}
+                    <div className="flex flex-1 items-center justify-center">
+                        <div className="flex shrink-0 items-center">
+                            <h1 className="text-2xl font-bold text-gray-200">Resgatando Vidas</h1>
+                        </div>
+                        <div className="hidden sm:ml-6 sm:block">
+                            <div className="flex space-x-4">
+                                <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Início</a>
+                                <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Quem sou</a>
+                                <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Serviços</a>
+                                <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contatos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Menu Mobile (Aparece quando isMobileMenuOpen é true) */}
+            {isMobileMenuOpen && (
+                <div className="sm:hidden" id="mobile-menu">
+                    <div className="space-y-1 px-2 pt-2 pb-3">
+                        <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Início</a>
+                        <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Quem sou</a>
+                        <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Serviços</a>
+                        <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contatos</a>
+                    </div>
+                </div>
+            )}
+        </nav>
+    );
+}
