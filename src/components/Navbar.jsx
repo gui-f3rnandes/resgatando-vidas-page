@@ -5,11 +5,11 @@ export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <nav className="bg-gray-800 w-screen">
+        <nav className="backdrop-blur-sm w-screen fixed top-0 left-0 z-50">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-center">
                     {/* Botão do Menu Mobile */}
-                    <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                         <button
                             type="button"
                             className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
@@ -34,16 +34,16 @@ export default function Navbar() {
                     </div>
 
                     {/* Logo + Itens do Menu Desktop */}
-                    <div className="flex flex-1 items-center justify-center">
+                    <div className="flex flex-1 items-center justify-center gap-30 lg:gap-60">
                         <div className="flex shrink-0 items-center">
-                            <h1 className="text-2xl font-bold text-gray-200">Resgatando Vidas</h1>
+                            <h1 className="text-2xl font-bold text-gray-800">Resgatando Vidas</h1>
                         </div>
-                        <div className="hidden sm:ml-6 sm:block">
+                        <div className="hidden md:ml-6 md:block">
                             <div className="flex space-x-4">
-                                <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Início</a>
-                                <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Quem sou</a>
-                                <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Serviços</a>
-                                <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contatos</a>
+                                <a href="index.html" className="rounded-md px-3 py-2 text-sm font-bold text-gray-800 hover:bg-gray-700 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-110">Início</a>
+                                <a href="#" className="rounded-md px-3 py-2 text-sm font-bold text-gray-800 hover:bg-gray-700 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-110">Quem sou</a>
+                                <a href="#" className="rounded-md px-3 py-2 text-sm font-bold text-gray-800 hover:bg-gray-700 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-110">Serviços</a>
+                                <a href="#" className="rounded-md px-3 py-2 text-sm font-bold text-gray-800 hover:bg-gray-700 hover:text-white transition-all duration-300 ease-in-out transform hover:scale-110">Contatos</a>
                             </div>
                         </div>
                     </div>
@@ -52,12 +52,12 @@ export default function Navbar() {
 
             {/* Menu Mobile (Aparece quando isMobileMenuOpen é true) */}
             {isMobileMenuOpen && (
-                <div className="sm:hidden" id="mobile-menu">
-                    <div className="space-y-1 px-2 pt-2 pb-3">
-                        <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Início</a>
-                        <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Quem sou</a>
-                        <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Serviços</a>
-                        <a href="#" className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contatos</a>
+                <div className="md:hidden" id="mobile-menu">
+                    <div className="flex flex-col space-y-1 px-2 pt-2 pb-3">
+                        <a href="index.html" className="rounded-md px-3 py-2 text-sm font-bold text-gray-800 hover:bg-gray-700 hover:text-white">Início</a>
+                        <a href="#" className="rounded-md px-3 py-2 text-sm font-bold text-gray-800 hover:bg-gray-700 hover:text-white">Quem sou</a>
+                        <a href="#" className="rounded-md px-3 py-2 text-sm font-bold text-gray-800 hover:bg-gray-700 hover:text-white">Serviços</a>
+                        <a href="#" className="rounded-md px-3 py-2 text-sm font-bold text-gray-800 hover:bg-gray-700 hover:text-white">Contatos</a>
                     </div>
                 </div>
             )}
