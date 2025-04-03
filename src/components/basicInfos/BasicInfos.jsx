@@ -2,8 +2,7 @@ function BasicInfos({ pequenoTitulo, titulo, paragrafo }) {
     return (
         <>
             <div
-                className="flex flex-col items-center text-center gap-2.5 mb-10 px-4 
-                   md:items-start md:text-left"
+                className="flex flex-col items-center text-center gap-2.5 mb-10 px-4 md:items-start md:text-left"
             >
                 <h4 className="text-xl font-bold">{pequenoTitulo}</h4>
                 <h1 className="text-3xl font-bold">{titulo}</h1>

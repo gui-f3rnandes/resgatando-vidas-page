@@ -6,7 +6,7 @@ export default function Navbar() {
 
     useEffect(() => {
         const updateTextColor = () => {
-            setTextColor(window.scrollY > 800 ? "text-black" : "text-white");
+            setTextColor(window.scrollY > 750 ? "text-black" : "text-white");
         };
 
         window.addEventListener("scroll", updateTextColor);
