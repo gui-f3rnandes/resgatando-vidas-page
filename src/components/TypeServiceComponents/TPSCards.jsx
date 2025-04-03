@@ -1,28 +1,31 @@
 import { Check } from "lucide-react";
 
-function TPSCards({srcImage,type,itemsIn}){
-    return(
-         
-                <div className="bg-[#F2F2F2] w-[30vw] rounded-md rounded-t-3xl space-y-3 hover:shadow-lg " >
-                    <figure className="bg-[#C0C0C0] h-[40vh] rounded-t-3xl">
-                        <img  className="w-full h-full object-cover " src={srcImage} alt="imagem ilustrativa" />
-                    </figure>
-                    <div className="px-3 space-y-3">
-                        
-                        <h2 className="text-xl"><strong>{type}</strong></h2>
-                     
-                     {itemsIn.map((item) => (
-                         <div  className="flex flex-row p-2 space-x-3"> 
-                         <Check   className="min-h-5 min-w-5"/>
-                             <h3><strong>{item.title}: </strong>{item.desc}</h3>
-                         </div>
-                     ))}
-                        
-    
+function TPSCards({ srcImage, type, itemsIn }) {
+    return (
+        <div className="border-1 border-gray-200 w-[30vw] rounded-xl rounded-t-3xl space-y-3 hover:shadow-lg pb-4 transition-all duration-300 ease-in-out transform hover:scale-101 flex flex-col min-h-[400px]">
+            <figure className="bg-[#C0C0C0] h-[25vh] rounded-t-xl">
+                <img className="w-full h-full object-cover rounded-t-xl" src={srcImage} alt="imagem ilustrativa" />
+            </figure>
             
+            <div className="px-6 space-y-1 flex-grow">
+                <h4 className="text-lg text-gray-800 text-center"><strong>{type}</strong></h4>
+                {itemsIn.map((item, index) => (
+                    <div key={index} className="flex flex-row p-2 space-x-1.5 text-gray-700 text-sm">
+                        <Check className="min-h-5 min-w-5" />
+                        <p><strong>{item.title}: </strong>{item.desc}</p>
                     </div>
-                </div>        
+                ))}
+            </div>
+            {/* O botão será empurrado para o final do card */}
+            <div className="mt-auto py-4 flex justify-center">
+                <a href="tel:+" className="w-[80%] block bg-[#8B5E3B] text-gray-200 p-3 mx-auto rounded-xl text-center font-bold shadow-md hover:bg-[#5F7A49] transition-all duration-300 ease-in-out transform hover:scale-105">
+                    Entre em contato
+                </a>
+            </div>
+        </div>
     );
 }
+
+
 
 export default TPSCards
