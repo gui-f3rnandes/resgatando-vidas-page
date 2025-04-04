@@ -26,7 +26,7 @@ function Location() {
             </div>
 
             {/* Grid de Cards responsivo */}
-            <div id="locationsCards" className="flex flex-col justify-center items-center px-4 w-[55vw] md:w-[60vw] max-sm:w-[80vw] mx-auto my-16 pb-16">
+            <div id="locationsCards" className="flex flex-col justify-center items-center px-4 w-[55vw] md:w-[60vw] max-sm:w-[90vw] mx-auto my-16 pb-16">
                 <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 md:gap-10 w-full">
                         
                         <CardOfClinics
