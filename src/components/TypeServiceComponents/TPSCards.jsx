@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import ButtonContact from "../StylistComponents/ButtonContact";
 
 function TPSCards({ srcImage, type, itemsIn }) {
     return (
@@ -18,9 +19,9 @@ function TPSCards({ srcImage, type, itemsIn }) {
             </div>
             {/* O botão será empurrado para o final do card */}
             <div className="mt-auto py-4 flex justify-center">
-                <a href="tel:+" className="w-[80%] block bg-[#8B5E3B] text-gray-200 p-3 mx-auto rounded-xl text-center font-bold shadow-md hover:bg-[#5F7A49] transition-all duration-300 ease-in-out transform hover:scale-105">
+                <ButtonContact href="tel:+" className="w-[80%] block mx-auto rounded-xl text-center">
                     Entre em contato
-                </a>
+                </ButtonContact>
             </div>
         </div>
     );

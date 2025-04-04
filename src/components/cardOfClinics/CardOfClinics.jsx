@@ -1,3 +1,5 @@
+import ButtonContact from "../StylistComponents/ButtonContact";
+
 function CardOfClinics({ clinicName, description, address, imageSrc }) {
 
     return (
@@ -27,12 +29,12 @@ function CardOfClinics({ clinicName, description, address, imageSrc }) {
                 </p>
 
                 <address className="not-italic">
-                <a
+                <ButtonContact
                     href="tel:+"
-                    className="bg-[#8B5E3B] text-gray-200 p-3 rounded-lg flex w-full justify-center mt-3 font-bold shadow-md hover:bg-[#5F7A49] transition-all duration-300 ease-in-out transform hover:scale-105"
+                    className=" rounded-lg flex w-full justify-center bg mt-3"
                 >
                     Entre em contato
-                </a>
+                </ ButtonContact>
                 </address>
             </div>
         </div>
