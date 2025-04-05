@@ -64,7 +64,7 @@ export default function Navbar() {
             {isMobileMenuOpen && (
                 <div className="md:hidden backdrop-blur-sm bg-white/30 absolute top-16 left-0 w-full z-40 overflow-hidden transition-all duration-500 ease-in-out opacity-100 translate-y-0 max-h-[500px]">
                     <div className="flex flex-col space-y-1 px-2 pt-2 pb-3">
-                        {["Início", "Quem sou", "Serviços", "Contatos"].map((item, index) => (
+                        {menuItems.map((item, index) => (
                             <a
                                 key={index}
                                 href={item.href}
