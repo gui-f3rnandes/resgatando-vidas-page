@@ -8,7 +8,7 @@ function ButtonContact(props){
 
     return(
         <a 
-        
+        href="https://wa.me/5511992774953?text=Ol%C3%A1%2C%20preciso%20ajudar%20uma%20pessoa!%20Pode%20me%20ajudar%3F"
         className={`${props.className} ${Class}`}
         >
             {props.children}
