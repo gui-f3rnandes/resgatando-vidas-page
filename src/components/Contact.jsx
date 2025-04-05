@@ -2,7 +2,7 @@ import ButtonContact from "./StylistComponents/ButtonContact"
 
 function Contact() {
     return (
-        <section className="px-10 md:px-20 xl:px-40 py-40 flex flex-col gap-10 items-center justify-center text-center md:text-start lg:flex-row lg:gap-10 bg-[#5F7A49] text-gray-200">
+        <section className="px-10 md:px-20 xl:px-40 py-40 flex flex-col gap-10 items-center justify-center text-center md:text-start lg:flex-row lg:gap-10 bg-[#5F7A49] text-gray-200" id="contatos">
             <h4 className="flex flex-col md:w-[50%] lg:w-[22vw] text-2xl lg:text-3xl xl:text-5xl/14 font-bold">
                 Entre em contato agora mesmo e ajude uma pessoa!
             </h4>

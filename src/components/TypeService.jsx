@@ -3,7 +3,7 @@ import TPSCards from "./TypeServiceComponents/TPSCards"
 
 function TypeService() {
     return (
-        <section className="bg-[#C9A871] flex flex-col justify-center items-center p-20 py-40 gap-10">
+        <section className="bg-[#C9A871] flex flex-col justify-center items-center p-20 py-40 gap-10" id="servicos">
             <h4 className="text-4xl text-center font-bold text-gray-800">Tipos de Serviços</h4>
             <div className="flex flex-col xl:flex-row xl:w-[70vw] gap-y-10 md:space-x-5">
                 <TPSCards srcImage={"../src/assets/voluntaria.jpeg"} type={'Internação voluntária'}

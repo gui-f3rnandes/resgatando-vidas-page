@@ -3,6 +3,12 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [textColor, setTextColor] = useState("text-white");
+    const menuItems = [
+        { label: "Início", href: "#inicio" },
+        { label: "Quem Sou", href: "#quemSou" },
+        { label: "Serviços", href: "#servicos" },
+        { label: "Contatos", href: "#contatos" }
+    ]
 
     useEffect(() => {
         const updateTextColor = () => {
@@ -41,13 +47,13 @@ export default function Navbar() {
                         </div>
                         <div className="hidden md:block">
                             <div className="flex space-x-4">
-                                {["Início", "Quem sou", "Serviços", "Contatos"].map((item, index) => (
+                                {menuItems.map((item, index) => (
                                     <a
                                         key={index}
-                                        href="#"
+                                        href={item.href}
                                         className={`rounded-md px-3 py-2 text-sm font-bold ${textColor} transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-300/50`}
                                     >
-                                        {item}
+                                        {item.label}
                                     </a>
                                 ))}
                             </div>
@@ -61,10 +67,10 @@ export default function Navbar() {
                         {["Início", "Quem sou", "Serviços", "Contatos"].map((item, index) => (
                             <a
                                 key={index}
-                                href="#"
+                                href={item.href}
                                 className="rounded-md px-3 py-2 text-sm font-bold ${textColor} transition-all duration-300 ease-in-out transform hover:scale-102 hover:bg-gray-200/50"
                             >
-                                {item}
+                                {item.label}
                             </a>
                         ))}
                     </div>
