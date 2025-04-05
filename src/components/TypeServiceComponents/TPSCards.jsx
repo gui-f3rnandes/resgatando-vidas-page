@@ -18,7 +18,7 @@ function TPSCards({ srcImage, type, itemsIn }) {
                 ))}
             </div>
             {/* O botão será empurrado para o final do card */}
-            <div className="mt-auto py-4 flex justify-center">
+            <div className="m-auto py-4 flex justify-center w-[90%]">
                 <ButtonContact href="tel:+" className="w-[80%] block mx-auto rounded-xl text-center">
                     Entre em contato
                 </ButtonContact>
