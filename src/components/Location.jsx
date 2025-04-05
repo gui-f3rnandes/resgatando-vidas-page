@@ -18,7 +18,7 @@ function Location() {
 
                 <figure className="lg:w-[18vw] mt-6 lg:mt-0">
                     <img
-                        src="./src/assets/Brazil.png"
+                        src="./src/assets/brazil.png"
                         alt="Mapa do Brasil"
                         className="w-full h-auto object-contain"
                     />
