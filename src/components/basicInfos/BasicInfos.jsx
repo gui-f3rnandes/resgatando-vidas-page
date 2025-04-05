@@ -1,3 +1,5 @@
+import ButtonContact from "../StylistComponents/ButtonContact"
+
 function BasicInfos({ pequenoTitulo, titulo, paragrafo }) {
     return (
         <>
@@ -18,14 +20,9 @@ function BasicInfos({ pequenoTitulo, titulo, paragrafo }) {
                  * - `tracking-tight`: Reduz o espaçamento entre letras para melhor compactação
                 */}
                 <p className="max-w-2xl w-full text-justify hyphens-auto break-words leading-snug tracking-tight">{paragrafo}</p>
-                <a
-                    href="tel:+"
-                    className="bg-[#8B5E3B] text-gray-200 p-3 rounded-xl w-full text-center mt-3 md:w-auto md:px-16 font-bold shadow-md hover:bg-[#5F7A49] transition-all duration-300 ease-in-out transform hover:scale-105"
-                >
+                <ButtonContact href="tel:+" className=" py-2 xl:py-4 rounded-xl lg:w-1/2 text-center mt-3 md:w-auto md:px-10 ">
                     Entre em contato
-                </a>
-
-
+                    </ButtonContact>
             </div>
         </>
     );
